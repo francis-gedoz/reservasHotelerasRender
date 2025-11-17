@@ -1,0 +1,204 @@
+Ejemplos de reservas hoteleras para hacer POST:
+
+[
+{
+"hotel": "hilton",
+"habitacion": "doble",
+"huespedes": 2,
+"checkin": "2026-04-15",
+"checkout": "2026-04-20",
+"estado": "pendiente",
+"cliente": "maria rodriguez",
+"notas": "vista al mar solicitada"
+},
+{
+"hotel": "marriott",
+"habitacion": "suite",
+"huespedes": 3,
+"checkin": "2026-05-10",
+"checkout": "2026-05-15",
+"estado": "confirmada",
+"cliente": "carlos sanchez",
+"notas": "incluye desayuno"
+},
+{
+"hotel": "sheraton",
+"habitacion": "family",
+"huespedes": 4,
+"checkin": "2026-06-01",
+"checkout": "2026-06-07",
+"estado": "confirmada",
+"cliente": "ana martinez",
+"notas": "cama adicional requerida"
+},
+{
+"hotel": "westin",
+"habitacion": "single",
+"huespedes": 1,
+"checkin": "2026-07-20",
+"checkout": "2026-07-22",
+"estado": "pendiente",
+"cliente": "roberto silva",
+"notas": "early check-in solicitado"
+},
+{
+"hotel": "ritz",
+"habitacion": "suite deluxe",
+"huespedes": 2,
+"checkin": "2026-08-05",
+"checkout": "2026-08-10",
+"estado": "confirmada",
+"cliente": "laura torres",
+"notas": "servicio de spa incluido"
+},
+{
+"hotel": "interContinental",
+"habitacion": "doble",
+"huespedes": 2,
+"checkin": "2026-09-15",
+"checkout": "2026-09-18",
+"estado": "confirmada",
+"cliente": "diego morales",
+"notas": "habitación tranquila solicitada"
+},
+{
+"hotel": "hyatt",
+"habitacion": "single",
+"huespedes": 1,
+"checkin": "2026-10-01",
+"checkout": "2026-10-03",
+"estado": "pendiente",
+"cliente": "patricia lopez",
+"notas": "late check-out requerido"
+},
+{
+"hotel": "four seasons",
+"habitacion": "suite presidencial",
+"huespedes": 4,
+"checkin": "2026-11-20",
+"checkout": "2026-11-25",
+"estado": "confirmada",
+"cliente": "miguel gonzalez",
+"notas": "servicio de transporte incluido"
+},
+{
+"hotel": "novotel",
+"habitacion": "family",
+"huespedes": 3,
+"checkin": "2026-12-24",
+"checkout": "2026-12-28",
+"estado": "confirmada",
+"cliente": "elena ramirez",
+"notas": "celebración navideña"
+},
+{
+"hotel": "ibis",
+"habitacion": "single",
+"huespedes": 1,
+"checkin": "2026-03-01",
+"checkout": "2026-03-03",
+"estado": "confirmada",
+"cliente": "francis gedoz",
+"notas": "check-in en la tarde"
+},
+{
+  "hotel": "melia",
+  "habitacion": "doble",
+  "huespedes": 2,
+  "checkin": "2026-01-10",
+  "checkout": "2026-01-15",
+  "estado": "confirmada",
+  "cliente": "andres perez",
+  "notas": "solicita piso alto"
+},
+{
+  "hotel": "accor",
+  "habitacion": "suite",
+  "huespedes": 3,
+  "checkin": "2026-02-05",
+  "checkout": "2026-02-10",
+  "estado": "pendiente",
+  "cliente": "valentina rios",
+  "notas": "necesita cuna para bebé"
+},
+{
+  "hotel": "radisson",
+  "habitacion": "family",
+  "huespedes": 5,
+  "checkin": "2026-03-20",
+  "checkout": "2026-03-25",
+  "estado": "confirmada",
+  "cliente": "lucas fernandez",
+  "notas": "vista al jardín solicitada"
+},
+{
+  "hotel": "crown plaza",
+  "habitacion": "single",
+  "huespedes": 1,
+  "checkin": "2026-04-02",
+  "checkout": "2026-04-04",
+  "estado": "pendiente",
+  "cliente": "isabel moreno",
+  "notas": "check-in nocturno"
+},
+{
+  "hotel": "holiday inn",
+  "habitacion": "doble",
+  "huespedes": 2,
+  "checkin": "2026-05-18",
+  "checkout": "2026-05-22",
+  "estado": "confirmada",
+  "cliente": "sebastian duarte",
+  "notas": "desayuno sin gluten solicitado"
+},
+{
+  "hotel": "wyndham",
+  "habitacion": "suite deluxe",
+  "huespedes": 2,
+  "checkin": "2026-06-12",
+  "checkout": "2026-06-17",
+  "estado": "cancelada",
+  "cliente": "paula mejia",
+  "notas": "cancelada por motivos personales"
+},
+{
+  "hotel": "renaissance",
+  "habitacion": "family",
+  "huespedes": 4,
+  "checkin": "2026-07-05",
+  "checkout": "2026-07-10",
+  "estado": "confirmada",
+  "cliente": "jorge castro",
+  "notas": "reserva con niños pequeños"
+},
+{
+  "hotel": "sofitel",
+  "habitacion": "suite",
+  "huespedes": 3,
+  "checkin": "2026-08-14",
+  "checkout": "2026-08-19",
+  "estado": "pendiente",
+  "cliente": "camila herrera",
+  "notas": "solicita traslado al aeropuerto"
+},
+{
+  "hotel": "banyan tree",
+  "habitacion": "villa",
+  "huespedes": 2,
+  "checkin": "2026-09-01",
+  "checkout": "2026-09-07",
+  "estado": "confirmada",
+  "cliente": "ricardo molina",
+  "notas": "paquete romántico reservado"
+},
+{
+  "hotel": "hard rock",
+  "habitacion": "suite premium",
+  "huespedes": 2,
+  "checkin": "2026-10-10",
+  "checkout": "2026-10-15",
+  "estado": "confirmada",
+  "cliente": "sofia diaz",
+  "notas": "aniversario de matrimonio"
+}
+]

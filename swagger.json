@@ -1,0 +1,179 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de Gestión de Reservas de Hoteles",
+        "version": "1.1.0",
+        "description": "API REST creada con Node.js y Express para administrar reservas de hoteles. Incluye CRUD completo y filtros avanzados."
+    },
+    "servers": [
+        {
+        "url": "http://localhost:3000/api",
+        "description": "Servidor local de desarrollo"
+        }
+    ],
+    "paths": {
+        "/reservas": {
+        "get": {
+            "summary": "Listar todas las reservas o aplicar filtros",
+            "tags": ["Reservas"],
+            "parameters": [
+            {
+                "name": "reserva",
+                "in": "query",
+                "description": "Filtrar por ID de reserva",
+                "schema": { "type": "string" }
+            },
+            {
+                "name": "hotel",
+                "in": "query",
+                "description": "Filtrar por nombre de hotel",
+                "schema": { "type": "string" }
+            },
+            {
+                "name": "habitacion",
+                "in": "query",
+                "description": "Filtrar por tipo de habitación",
+                "schema": { "type": "string" }
+            },
+            {
+                "name": "estado",
+                "in": "query",
+                "description": "Filtrar por estado de la reserva",
+                "schema": { "type": "string", "enum": ["confirmada", "pendiente", "cancelada"] }
+            },
+            {
+                "name": "cliente",
+                "in": "query",
+                "description": "Filtrar por nombre del cliente",
+                "schema": { "type": "string" }
+            },
+            {
+                "name": "huespedes",
+                "in": "query",
+                "description": "Filtrar por cantidad de huéspedes",
+                "schema": { "type": "integer" }
+            },
+            {
+                "name": "checkin",
+                "in": "query",
+                "description": "Filtrar por fecha de check-in (>=)",
+                "schema": { "type": "string", "format": "date" }
+            },
+            {
+                "name": "checkout",
+                "in": "query",
+                "description": "Filtrar por fecha de check-out (<=)",
+                "schema": { "type": "string", "format": "date" }
+            }
+            ],
+            "responses": {
+            "200": {
+                "description": "Lista de reservas obtenida correctamente",
+                "content": {
+                "application/json": {
+                    "schema": { "type": "array", "items": { "$ref": "#/components/schemas/Reserva" } }
+                }
+                }
+            },
+            "400": { "description": "Parámetros de búsqueda inválidos" }
+            }
+        },
+        "post": {
+            "summary": "Crear una nueva reserva",
+            "tags": ["Reservas"],
+            "requestBody": {
+            "required": true,
+            "content": {
+                "application/json": {
+                "schema": { "$ref": "#/components/schemas/Reserva" }
+                }
+            }
+            },
+            "responses": {
+            "201": { "description": "Reserva creada correctamente" },
+            "400": { "description": "Datos inválidos" }
+            }
+        }
+        },
+        "/reservas/{reserva}": {
+        "get": {
+            "summary": "Obtener una reserva específica",
+            "tags": ["Reservas"],
+            "parameters": [
+            {
+                "name": "reserva",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "string" }
+            }
+            ],
+            "responses": {
+            "200": {
+                "description": "Reserva encontrada",
+                "content": {
+                "application/json": { "schema": { "$ref": "#/components/schemas/Reserva" } }
+                }
+            },
+            "404": { "description": "Reserva no encontrada" }
+            }
+        },
+        "put": {
+            "summary": "Actualizar una reserva existente",
+            "tags": ["Reservas"],
+            "parameters": [
+            {
+                "name": "reserva",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "string" }
+            }
+            ],
+            "requestBody": {
+            "required": true,
+            "content": {
+                "application/json": { "schema": { "$ref": "#/components/schemas/Reserva" } }
+            }
+            },
+            "responses": {
+            "200": { "description": "Reserva actualizada correctamente" },
+            "404": { "description": "Reserva no encontrada" }
+            }
+        },
+        "delete": {
+            "summary": "Eliminar una reserva existente",
+            "tags": ["Reservas"],
+            "parameters": [
+            {
+                "name": "reserva",
+                "in": "path",
+                "required": true,
+                "schema": { "type": "string" }
+            }
+            ],
+            "responses": {
+            "200": { "description": "Reserva eliminada correctamente" },
+            "404": { "description": "Reserva no encontrada" }
+            }
+        }
+        }
+    },
+    "components": {
+        "schemas": {
+        "Reserva": {
+            "type": "object",
+            "properties": {
+            "reserva": { "type": "string", "example": "abcdef123456" },
+            "hotel": { "type": "string", "example": "Hotel Plaza" },
+            "habitacion": { "type": "string", "example": "Suite Doble" },
+            "huespedes": { "type": "integer", "example": 2 },
+            "checkin": { "type": "string", "format": "date", "example": "2025-11-10" },
+            "checkout": { "type": "string", "format": "date", "example": "2025-11-15" },
+            "estado": { "type": "string", "example": "confirmada" },
+            "cliente": { "type": "string", "example": "Barack Obama" },
+            "notas": { "type": "string", "example": "Check-in temprano solicitado" }
+            },
+            "required": ["hotel", "habitacion", "huespedes", "checkin", "checkout", "cliente"]
+        }
+        }
+    }
+}
