@@ -8,6 +8,12 @@ El proyecto fue desarrollado en **Node.js + Express**, utilizando una **estructu
 
 ---
 
+# Despliegue en Render.com
+
+https://reservashotelerasrender.onrender.com
+
+---
+
 ## Funcionalidades principales
 
 La API permite:
