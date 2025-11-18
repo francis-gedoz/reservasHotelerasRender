@@ -10,7 +10,7 @@ El proyecto fue desarrollado en **Node.js + Express**, utilizando una **estructu
 
 # Despliegue en Render.com
 
-https://reservashotelerasrender.onrender.com
+https://reservashotelerasrender.onrender.com/api/docs/
 
 ---
 
